@@ -216,7 +216,8 @@ extension ViewController {
     })
   }
   
-  func upload(image: UIImage, progressCompletion: @escaping (_ percent: Float) -> (),
+  func upload(image: UIImage,
+              progressCompletion: @escaping (_ percent: Float) -> (),
               completion: @escaping (_ tags: [PhotoTag], _ colors: [PhotoColor]) -> ()) {
     
     guard let imageData = UIImageJPEGRepresentation(image, 0.5) else {
@@ -291,6 +292,7 @@ extension ViewController {
           let results = responseJSON["results"] as? [[String: Any]],
           let firstObj = results.first,
           let tagsAndConfidences = firstObj["tags"] as? [[String: Any]] else {
+            
             print("Invalid tag information received from the service")
             completion([String]())
             return
@@ -318,6 +320,7 @@ extension ViewController {
           let results = responseJSON["results"] as? [[String: Any]],
           let firstObj = results.first,
           let tagsAndConfidences = firstObj["tags"] as? [[String: Any]] else {
+            
             print("Invalid tag information received from the service")
             completion([String]())
             return
@@ -330,7 +333,8 @@ extension ViewController {
     }
   }
   
-  func downloadColorsWithURLRequestConvertible(contentID: String, completion: @escaping ([PhotoColor]) -> ()) {
+  func downloadColorsWithURLRequestConvertible(contentID: String,
+                                               completion: @escaping ([PhotoColor]) -> ()) {
     Alamofire.request(ImaggaRouter.colors(contentID))
       .responseJSON { (response) in
         guard response.result.isSuccess else {
@@ -344,6 +348,7 @@ extension ViewController {
           let firstResult = results.first,
           let info = firstResult["info"] as? [String: Any],
           let imageColors = info["image_colors"] as? [[String: Any]] else {
+            
             print("Invalid color information received from service")
             completion([PhotoColor]())
             return
