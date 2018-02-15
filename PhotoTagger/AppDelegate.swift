@@ -21,6 +21,7 @@
  */
 
 import UIKit
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -28,7 +29,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   var window: UIWindow?
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    if #available(iOS 10.0, *) {
+      UNUserNotificationCenter
+        .current()
+        .requestAuthorization(options: [.alert, .sound]) { granted, error in
+          if let error = error, !granted {
+            print("\(error.localizedDescription)")
+          }
+      }
+    } else {
+      application.registerUserNotificationSettings(UIUserNotificationSettings(
+        types: [.alert , .badge , .sound], categories: nil)
+      )
+    }
+    
     return true
+  }
+  
+  func application(_ application: UIApplication, handleEventsForBackgroundURLSession identifier: String, completionHandler: @escaping () -> Void) {
+    //    Alamofire.SessionManager.default.backgroundCompletionHandler
+    NetworkBackgroundManager.shared.backgroundCompletionHandler = completionHandler
+  }
+  
+  func applicationDidEnterBackground(_ application: UIApplication) {
+    print("Did Enter Background")
   }
   
 }

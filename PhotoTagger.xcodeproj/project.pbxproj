@@ -8,8 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		12B3EE691052BE6409ECE773 /* Pods_PhotoTagger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B9F74080B086077E5E9863F /* Pods_PhotoTagger.framework */; };
+		3C39C55A2034A9B700E006CD /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C39C5592034A9B700E006CD /* GalleryViewController.swift */; };
+		3C39C55D2034AA3600E006CD /* ImageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C39C55C2034AA3600E006CD /* ImageItem.swift */; };
 		3CA2450D202F5A2600E225D0 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA2450C202F5A2600E225D0 /* UIImage+Extension.swift */; };
 		3CA2450F202F5C6600E225D0 /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA2450E202F5C6600E225D0 /* Data+Extension.swift */; };
+		3CDC691A2033553D00A9DF07 /* NetworkBackgroundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDC69192033553D00A9DF07 /* NetworkBackgroundManager.swift */; };
+		3CDC691C20340FEC00A9DF07 /* BackgroundFetchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDC691B20340FEC00A9DF07 /* BackgroundFetchViewController.swift */; };
 		932ED1F71BF9390D0072C1C4 /* PhotoColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932ED1F61BF9390D0072C1C4 /* PhotoColor.swift */; };
 		932ED1F91BF944590072C1C4 /* TagsColorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932ED1F81BF944590072C1C4 /* TagsColorsViewController.swift */; };
 		932ED1FB1BF9459E0072C1C4 /* TagsColorsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932ED1FA1BF9459E0072C1C4 /* TagsColorsTableViewController.swift */; };
@@ -24,8 +28,12 @@
 
 /* Begin PBXFileReference section */
 		0B9F74080B086077E5E9863F /* Pods_PhotoTagger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoTagger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C39C5592034A9B700E006CD /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
+		3C39C55C2034AA3600E006CD /* ImageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageItem.swift; sourceTree = "<group>"; };
 		3CA2450C202F5A2600E225D0 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		3CA2450E202F5C6600E225D0 /* Data+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extension.swift"; sourceTree = "<group>"; };
+		3CDC69192033553D00A9DF07 /* NetworkBackgroundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkBackgroundManager.swift; sourceTree = "<group>"; };
+		3CDC691B20340FEC00A9DF07 /* BackgroundFetchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundFetchViewController.swift; sourceTree = "<group>"; };
 		8D256BE11AA892EE02693AF5 /* Pods-PhotoTagger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoTagger.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoTagger/Pods-PhotoTagger.release.xcconfig"; sourceTree = "<group>"; };
 		932ED1F61BF9390D0072C1C4 /* PhotoColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoColor.swift; sourceTree = "<group>"; };
 		932ED1F81BF944590072C1C4 /* TagsColorsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagsColorsViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +62,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C39C55B2034AA1200E006CD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3C39C55C2034AA3600E006CD /* ImageItem.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		3CA2450B202F59F400E225D0 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +116,7 @@
 				A008FF4D1FD9B75D00B0D944 /* Network */,
 				A0A08D831FD939BC00F4BD7A /* Model */,
 				A0A08D841FD939C300F4BD7A /* Controller */,
+				3C39C55B2034AA1200E006CD /* View */,
 				93EF0CAA1BF41DA20051B5B1 /* Assets.xcassets */,
 				93EF0CAF1BF41DA20051B5B1 /* Info.plist */,
 				93EF0CA71BF41DA20051B5B1 /* Main.storyboard */,
@@ -112,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				A008FF4E1FD9B76F00B0D944 /* ImaggaRouter.swift */,
+				3CDC69192033553D00A9DF07 /* NetworkBackgroundManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -129,6 +147,8 @@
 			isa = PBXGroup;
 			children = (
 				93EF0CA51BF41DA20051B5B1 /* ViewController.swift */,
+				3CDC691B20340FEC00A9DF07 /* BackgroundFetchViewController.swift */,
+				3C39C5592034A9B700E006CD /* GalleryViewController.swift */,
 				932ED1F81BF944590072C1C4 /* TagsColorsViewController.swift */,
 				932ED1FA1BF9459E0072C1C4 /* TagsColorsTableViewController.swift */,
 			);
@@ -274,14 +294,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				932ED1F71BF9390D0072C1C4 /* PhotoColor.swift in Sources */,
+				3C39C55D2034AA3600E006CD /* ImageItem.swift in Sources */,
 				932ED1F91BF944590072C1C4 /* TagsColorsViewController.swift in Sources */,
+				3CDC691A2033553D00A9DF07 /* NetworkBackgroundManager.swift in Sources */,
 				932ED1FB1BF9459E0072C1C4 /* TagsColorsTableViewController.swift in Sources */,
 				3CA2450D202F5A2600E225D0 /* UIImage+Extension.swift in Sources */,
 				9569363E1E0B06AC00B49A5A /* TagsColorTableData.swift in Sources */,
 				A008FF4F1FD9B76F00B0D944 /* ImaggaRouter.swift in Sources */,
 				93EF0CA61BF41DA20051B5B1 /* ViewController.swift in Sources */,
 				93EF0CA41BF41DA20051B5B1 /* AppDelegate.swift in Sources */,
+				3C39C55A2034A9B700E006CD /* GalleryViewController.swift in Sources */,
 				3CA2450F202F5C6600E225D0 /* Data+Extension.swift in Sources */,
+				3CDC691C20340FEC00A9DF07 /* BackgroundFetchViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
