@@ -175,7 +175,6 @@
 				93EF0C9D1BF41DA20051B5B1 /* Frameworks */,
 				93EF0C9E1BF41DA20051B5B1 /* Resources */,
 				7666880AA329BC7110749B71 /* [CP] Embed Pods Frameworks */,
-				E8E1D2746A03AB58DFECAC90 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -269,21 +268,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PhotoTagger/Pods-PhotoTagger-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E8E1D2746A03AB58DFECAC90 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PhotoTagger/Pods-PhotoTagger-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
